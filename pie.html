@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Power Plant Visualizations</title>
+<title>Galeomorphi Visualizations</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 
 <style>
@@ -47,7 +47,7 @@ function hideTooltip(){
     tooltip.style("opacity",0);
 }
 
-d3.csv("Galeomorphi_Chart.csv").then(data=>{
+d3.csv("Galeomorphi_Data.csv").then(data=>{
 
 data.forEach(d=>{
     d.isGaleomorphi = +d.isGaleomorphi; 
