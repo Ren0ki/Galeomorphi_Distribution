@@ -1,0 +1,201 @@
+plant_id,plant_name,country,region,energy_type,capacity_mw,year_built,latitude,longitude,owner_company
+1,Nuclear Plant 1,Morocco,Africa,Nuclear,935,1999,-11.657,127.901,AfricaWind
+2,Gas Plant 2,Poland,Europe,Gas,305,1992,52.434,-97.862,Maghreb Power
+3,Wind Plant 3,China,Asia,Wind,218,2014,-26.303,79.009,AusRenew
+4,Nuclear Plant 4,South Africa,Africa,Nuclear,1367,2002,4.387,-95.99,SunGrid Corp
+5,Coal Plant 5,India,Asia,Coal,925,1985,28.416,101.182,HydroNorth
+6,Wind Plant 6,Canada,North America,Wind,180,2013,56.352,-62.742,DragonPower
+7,Nuclear Plant 7,India,Asia,Nuclear,924,1989,24.072,21.586,EuroSolar AG
+8,Coal Plant 8,Brazil,South America,Coal,733,1989,-11.502,75.304,AsiaEnergy Co
+9,Hydro Plant 9,Egypt,Africa,Hydro,460,1986,50.452,-73.215,DragonPower
+10,Nuclear Plant 10,France,Europe,Nuclear,1104,1992,39.596,133.067,EuroNuke
+11,Nuclear Plant 11,UK,Europe,Nuclear,1377,1997,-20.113,-117.405,Maghreb Power
+12,Gas Plant 12,Egypt,Africa,Gas,738,1996,56.634,-51.21,HydroNorth
+13,Wind Plant 13,Poland,Europe,Wind,398,2018,18.113,140.113,PowerGen LLC
+14,Coal Plant 14,Germany,Europe,Coal,806,1990,38.921,96.096,EuroSolar AG
+15,Hydro Plant 15,France,Europe,Hydro,628,1985,32.967,34.821,PowerGen LLC
+16,Nuclear Plant 16,Japan,Asia,Nuclear,944,2006,-39.366,131.745,DragonPower
+17,Solar Plant 17,Japan,Asia,Solar,159,2013,4.15,133.863,AusRenew
+18,Wind Plant 18,UK,Europe,Wind,233,2008,47.373,19.745,EuroNuke
+19,Wind Plant 19,France,Europe,Wind,174,2015,-38.351,70.943,AusRenew
+20,Wind Plant 20,India,Asia,Wind,328,2013,11.435,92.416,SunGrid Corp
+21,Wind Plant 21,UK,Europe,Wind,283,2017,25.984,-43.002,AsiaEnergy Co
+22,Hydro Plant 22,Germany,Europe,Hydro,926,1980,0.059,130.777,DragonPower
+23,Solar Plant 23,UK,Europe,Solar,356,2015,52.595,-32.372,AusRenew
+24,Solar Plant 24,Argentina,South America,Solar,282,2023,-40.893,93.623,AfricaWind
+25,Wind Plant 25,Poland,Europe,Wind,151,2017,16.01,-79.117,DragonPower
+26,Hydro Plant 26,China,Asia,Hydro,962,2001,-16.834,39.211,AfricaWind
+27,Wind Plant 27,Poland,Europe,Wind,287,2015,19.647,-60.574,DragonPower
+28,Coal Plant 28,Australia,Oceania,Coal,1142,1993,-6.827,-117.085,BrazilEnergy
+29,Hydro Plant 29,South Africa,Africa,Hydro,641,2002,-9.369,6.871,Maghreb Power
+30,Gas Plant 30,China,Asia,Gas,333,1994,38.953,80.922,EuroNuke
+31,Coal Plant 31,UK,Europe,Coal,1062,2004,30.202,-80.348,EuroNuke
+32,Solar Plant 32,Morocco,Africa,Solar,276,2019,-6.364,-14.216,EuroNuke
+33,Wind Plant 33,Egypt,Africa,Wind,220,2021,58.899,-60.846,EuroSolar AG
+34,Solar Plant 34,South Africa,Africa,Solar,338,2015,-1.483,118.43,EuroSolar AG
+35,Solar Plant 35,Poland,Europe,Solar,347,2012,44.944,17.866,Maghreb Power
+36,Wind Plant 36,Japan,Asia,Wind,187,2010,-3.624,-9.379,AusRenew
+37,Coal Plant 37,Brazil,South America,Coal,1038,2005,-13.296,3.692,Maghreb Power
+38,Coal Plant 38,Argentina,South America,Coal,1205,2002,-26.712,77.841,AusRenew
+39,Coal Plant 39,Brazil,South America,Coal,1202,2004,21.408,-73.928,GreenWind Inc
+40,Hydro Plant 40,UK,Europe,Hydro,502,1986,36.628,-43.659,AsiaEnergy Co
+41,Gas Plant 41,Australia,Oceania,Gas,559,1999,-29.61,-6.918,GreenWind Inc
+42,Gas Plant 42,Spain,Europe,Gas,546,2007,47.071,119.446,EuroSolar AG
+43,Coal Plant 43,Brazil,South America,Coal,1290,1975,1.393,-5.793,AusRenew
+44,Wind Plant 44,Kenya,Africa,Wind,443,2006,-47.036,-116.131,EuroSolar AG
+45,Solar Plant 45,USA,North America,Solar,340,2020,19.925,-13.096,EuroNuke
+46,Solar Plant 46,Australia,Oceania,Solar,394,2014,-24.667,12.048,GreenWind Inc
+47,Coal Plant 47,Kenya,Africa,Coal,1242,1997,18.116,-12.035,Maghreb Power
+48,Solar Plant 48,Japan,Asia,Solar,233,2020,24.945,49.717,AfricaWind
+49,Nuclear Plant 49,Poland,Europe,Nuclear,1012,2001,30.127,17.582,EuroNuke
+50,Nuclear Plant 50,USA,North America,Nuclear,1059,1996,31.825,117.749,AsiaEnergy Co
+51,Hydro Plant 51,Japan,Asia,Hydro,643,2013,-38.442,-82.482,EuroNuke
+52,Gas Plant 52,Germany,Europe,Gas,578,2008,-9.767,-14.094,GreenWind Inc
+53,Gas Plant 53,Egypt,Africa,Gas,586,2000,52.896,-91.456,EuroNuke
+54,Solar Plant 54,Morocco,Africa,Solar,290,2009,41.082,122.942,SunGrid Corp
+55,Solar Plant 55,Japan,Asia,Solar,154,2015,-24.578,-68.729,BrazilEnergy
+56,Nuclear Plant 56,Japan,Asia,Nuclear,1271,2002,-29.022,-104.941,AusRenew
+57,Wind Plant 57,UK,Europe,Wind,209,2006,38.297,100.397,GreenWind Inc
+58,Wind Plant 58,Brazil,South America,Wind,309,2007,22.603,-99.886,SunGrid Corp
+59,Wind Plant 59,Egypt,Africa,Wind,374,2022,7.259,-50.105,AfricaWind
+60,Wind Plant 60,Japan,Asia,Wind,182,2008,42.666,-2.872,SunGrid Corp
+61,Coal Plant 61,USA,North America,Coal,974,2004,10.656,4.288,AfricaWind
+62,Gas Plant 62,South Africa,Africa,Gas,577,2005,57.679,-99.837,AsiaEnergy Co
+63,Wind Plant 63,India,Asia,Wind,257,2018,-17.274,36.436,AusRenew
+64,Hydro Plant 64,Chile,South America,Hydro,960,1989,9.391,-115.747,HydroNorth
+65,Wind Plant 65,Germany,Europe,Wind,175,2012,-39.837,-77.347,HydroNorth
+66,Coal Plant 66,Chile,South America,Coal,979,1982,-24.183,-113.044,Maghreb Power
+67,Nuclear Plant 67,Morocco,Africa,Nuclear,1148,2009,-41.262,122.474,BrazilEnergy
+68,Coal Plant 68,Chile,South America,Coal,1066,1995,27.471,-118.321,AsiaEnergy Co
+69,Hydro Plant 69,Spain,Europe,Hydro,562,2001,-40.233,39.932,GreenWind Inc
+70,Wind Plant 70,Chile,South America,Wind,459,2006,-44.214,-77.698,BrazilEnergy
+71,Coal Plant 71,USA,North America,Coal,985,1996,31.163,22.874,HydroNorth
+72,Gas Plant 72,Chile,South America,Gas,487,2004,-9.886,-109.483,HydroNorth
+73,Gas Plant 73,Spain,Europe,Gas,644,2000,-29.176,133.191,AusRenew
+74,Gas Plant 74,Poland,Europe,Gas,433,1997,47.063,142.972,AusRenew
+75,Nuclear Plant 75,Canada,North America,Nuclear,951,1989,-3.055,-56.181,Maghreb Power
+76,Solar Plant 76,Egypt,Africa,Solar,157,2021,-16.224,-15.713,SunGrid Corp
+77,Gas Plant 77,Canada,North America,Gas,423,2005,24.235,126.876,BrazilEnergy
+78,Wind Plant 78,Sweden,Europe,Wind,256,2006,-33.336,2.154,PowerGen LLC
+79,Solar Plant 79,USA,North America,Solar,380,2015,-16.407,127.632,HydroNorth
+80,Coal Plant 80,Germany,Europe,Coal,1213,1982,-49.307,-104.902,DragonPower
+81,Hydro Plant 81,Kenya,Africa,Hydro,903,1994,-47.569,108.59,EuroSolar AG
+82,Coal Plant 82,Argentina,South America,Coal,747,1981,-38.314,-29.182,EuroSolar AG
+83,Nuclear Plant 83,Egypt,Africa,Nuclear,1247,1988,52.913,4.295,BrazilEnergy
+84,Solar Plant 84,Sweden,Europe,Solar,269,2015,20.398,-73.451,AfricaWind
+85,Nuclear Plant 85,Japan,Asia,Nuclear,959,1999,31.704,66.571,PowerGen LLC
+86,Solar Plant 86,Germany,Europe,Solar,348,2014,53.558,-87.197,SunGrid Corp
+87,Hydro Plant 87,Poland,Europe,Hydro,697,2004,-39.79,34.849,DragonPower
+88,Wind Plant 88,Sweden,Europe,Wind,346,2019,-9.702,-91.826,HydroNorth
+89,Gas Plant 89,Chile,South America,Gas,541,2010,11.804,-59.109,HydroNorth
+90,Hydro Plant 90,Sweden,Europe,Hydro,896,2008,-23.89,-76.771,DragonPower
+91,Hydro Plant 91,Poland,Europe,Hydro,783,2005,15.413,82.304,BrazilEnergy
+92,Hydro Plant 92,Spain,Europe,Hydro,853,1990,38.051,11.852,HydroNorth
+93,Wind Plant 93,Argentina,South America,Wind,188,2007,-27.717,-113.033,DragonPower
+94,Hydro Plant 94,Japan,Asia,Hydro,514,2001,18.203,-9.485,AsiaEnergy Co
+95,Coal Plant 95,Kenya,Africa,Coal,1256,2000,-12.404,53.852,EuroSolar AG
+96,Hydro Plant 96,Brazil,South America,Hydro,507,1981,18.207,20.275,PowerGen LLC
+97,Hydro Plant 97,Canada,North America,Hydro,742,2013,44.083,69.131,PowerGen LLC
+98,Nuclear Plant 98,Canada,North America,Nuclear,1292,1991,-20.024,108.992,PowerGen LLC
+99,Nuclear Plant 99,India,Asia,Nuclear,1061,1990,-0.835,-90.413,AfricaWind
+100,Hydro Plant 100,Kenya,Africa,Hydro,693,2015,45.179,5.892,GreenWind Inc
+101,Nuclear Plant 101,India,Asia,Nuclear,976,2006,47.54,117.938,HydroNorth
+102,Hydro Plant 102,South Africa,Africa,Hydro,901,1992,2.35,112.007,SunGrid Corp
+103,Gas Plant 103,India,Asia,Gas,587,2017,-46.738,-25.812,HydroNorth
+104,Gas Plant 104,Chile,South America,Gas,502,2016,39.222,-11.741,BrazilEnergy
+105,Nuclear Plant 105,Spain,Europe,Nuclear,1183,2005,-24.976,6.255,EuroSolar AG
+106,Nuclear Plant 106,Morocco,Africa,Nuclear,1147,2003,37.512,50.077,GreenWind Inc
+107,Gas Plant 107,Egypt,Africa,Gas,397,1992,6.645,2.096,AusRenew
+108,Nuclear Plant 108,Chile,South America,Nuclear,1164,1986,39.76,119.392,AsiaEnergy Co
+109,Coal Plant 109,USA,North America,Coal,1061,1990,2.204,142.485,DragonPower
+110,Nuclear Plant 110,Egypt,Africa,Nuclear,1297,2001,30.379,-46.253,HydroNorth
+111,Wind Plant 111,Spain,Europe,Wind,274,2018,45.872,11.011,SunGrid Corp
+112,Solar Plant 112,Spain,Europe,Solar,166,2011,46.196,54.465,AusRenew
+113,Coal Plant 113,Kenya,Africa,Coal,758,1995,-3.735,-20.229,AfricaWind
+114,Nuclear Plant 114,Sweden,Europe,Nuclear,1143,2002,15.246,21.985,GreenWind Inc
+115,Coal Plant 115,Chile,South America,Coal,1178,1997,44.573,-29.2,DragonPower
+116,Solar Plant 116,China,Asia,Solar,259,2021,53.687,-78.077,EuroSolar AG
+117,Hydro Plant 117,Chile,South America,Hydro,560,1987,40.603,2.876,GreenWind Inc
+118,Gas Plant 118,Chile,South America,Gas,380,2010,-41.997,-96.617,AusRenew
+119,Wind Plant 119,South Africa,Africa,Wind,267,2018,43.398,143.925,Maghreb Power
+120,Gas Plant 120,Chile,South America,Gas,701,1992,-28.273,23.508,EuroNuke
+121,Hydro Plant 121,Brazil,South America,Hydro,597,2003,-15.133,-61.446,DragonPower
+122,Coal Plant 122,Morocco,Africa,Coal,789,1984,-24.679,-117.305,AusRenew
+123,Hydro Plant 123,Argentina,South America,Hydro,975,1983,15.373,142.047,PowerGen LLC
+124,Hydro Plant 124,South Africa,Africa,Hydro,876,2014,17.725,114.657,AsiaEnergy Co
+125,Coal Plant 125,Argentina,South America,Coal,1260,1980,52.68,-49.727,AfricaWind
+126,Coal Plant 126,Canada,North America,Coal,1058,1996,54.24,-43.91,Maghreb Power
+127,Coal Plant 127,Spain,Europe,Coal,1230,1989,0.974,-7.265,BrazilEnergy
+128,Gas Plant 128,South Africa,Africa,Gas,551,2014,-8.022,-60.856,Maghreb Power
+129,Wind Plant 129,China,Asia,Wind,466,2019,-27.966,69.147,DragonPower
+130,Gas Plant 130,France,Europe,Gas,344,1992,-39.556,101.522,Maghreb Power
+131,Solar Plant 131,China,Asia,Solar,335,2015,51.199,136.644,EuroNuke
+132,Hydro Plant 132,Brazil,South America,Hydro,772,2010,18.591,108.127,PowerGen LLC
+133,Wind Plant 133,Brazil,South America,Wind,417,2005,58.861,-66.172,GreenWind Inc
+134,Coal Plant 134,Brazil,South America,Coal,917,1998,6.847,-86.366,AsiaEnergy Co
+135,Nuclear Plant 135,Egypt,Africa,Nuclear,1163,2009,4.233,71.177,AfricaWind
+136,Solar Plant 136,UK,Europe,Solar,102,2015,-17.94,5.478,HydroNorth
+137,Gas Plant 137,China,Asia,Gas,335,1997,52.812,106.463,HydroNorth
+138,Coal Plant 138,China,Asia,Coal,925,1986,45.544,-116.448,Maghreb Power
+139,Wind Plant 139,Sweden,Europe,Wind,466,2020,5.25,116.19,HydroNorth
+140,Gas Plant 140,Japan,Asia,Gas,337,2000,-15.093,19.909,PowerGen LLC
+141,Solar Plant 141,Kenya,Africa,Solar,102,2008,-47.412,-119.005,AusRenew
+142,Gas Plant 142,Canada,North America,Gas,534,2016,-45.605,-0.771,SunGrid Corp
+143,Wind Plant 143,Brazil,South America,Wind,446,2022,54.933,78.454,EuroSolar AG
+144,Wind Plant 144,Sweden,Europe,Wind,435,2014,-40.916,93.768,AusRenew
+145,Solar Plant 145,China,Asia,Solar,117,2017,14.7,-66.874,HydroNorth
+146,Nuclear Plant 146,Spain,Europe,Nuclear,1370,1989,-42.39,-11.331,PowerGen LLC
+147,Gas Plant 147,USA,North America,Gas,563,2018,55.837,75.852,Maghreb Power
+148,Coal Plant 148,India,Asia,Coal,1129,1987,22.462,50.754,GreenWind Inc
+149,Coal Plant 149,France,Europe,Coal,826,1996,-43.76,114.529,SunGrid Corp
+150,Hydro Plant 150,Germany,Europe,Hydro,455,2014,-17.511,27.596,AfricaWind
+151,Solar Plant 151,Kenya,Africa,Solar,122,2023,-11.67,-40.348,EuroNuke
+152,Hydro Plant 152,Poland,Europe,Hydro,874,2001,42.342,-81.282,DragonPower
+153,Nuclear Plant 153,Egypt,Africa,Nuclear,1045,2006,-18.899,-33.58,Maghreb Power
+154,Nuclear Plant 154,Chile,South America,Nuclear,1208,1987,27.756,86.343,EuroNuke
+155,Hydro Plant 155,UK,Europe,Hydro,925,2000,-1.92,79.309,PowerGen LLC
+156,Coal Plant 156,Canada,North America,Coal,1071,1976,-34.106,134.466,GreenWind Inc
+157,Gas Plant 157,Sweden,Europe,Gas,531,2008,-11.944,-62.057,EuroNuke
+158,Nuclear Plant 158,Japan,Asia,Nuclear,954,1987,53.252,29.837,HydroNorth
+159,Gas Plant 159,Sweden,Europe,Gas,575,2013,-30.567,29.179,BrazilEnergy
+160,Solar Plant 160,Morocco,Africa,Solar,359,2023,-16.163,-101.975,PowerGen LLC
+161,Gas Plant 161,Argentina,South America,Gas,512,2000,-35.069,67.055,SunGrid Corp
+162,Nuclear Plant 162,China,Asia,Nuclear,1343,1991,20.538,39.615,EuroNuke
+163,Nuclear Plant 163,Kenya,Africa,Nuclear,976,1993,-0.042,55.646,HydroNorth
+164,Nuclear Plant 164,Australia,Oceania,Nuclear,1055,2003,38.153,10.996,BrazilEnergy
+165,Solar Plant 165,Australia,Oceania,Solar,136,2021,32.864,57.8,AsiaEnergy Co
+166,Nuclear Plant 166,France,Europe,Nuclear,1320,1993,36.257,108.652,DragonPower
+167,Wind Plant 167,UK,Europe,Wind,377,2022,-23.365,50.008,AsiaEnergy Co
+168,Nuclear Plant 168,Canada,North America,Nuclear,1050,1986,17.906,-2.337,DragonPower
+169,Coal Plant 169,Argentina,South America,Coal,854,2001,2.484,129.623,AfricaWind
+170,Solar Plant 170,Spain,Europe,Solar,131,2010,2.797,-54.596,AusRenew
+171,Hydro Plant 171,Kenya,Africa,Hydro,992,1998,-16.737,-18.252,DragonPower
+172,Solar Plant 172,Spain,Europe,Solar,374,2020,41.869,-50.098,AusRenew
+173,Nuclear Plant 173,Brazil,South America,Nuclear,1072,2008,54.76,48.978,AsiaEnergy Co
+174,Coal Plant 174,India,Asia,Coal,1229,1980,-2.781,115.865,HydroNorth
+175,Gas Plant 175,France,Europe,Gas,306,2017,57.87,-39.856,SunGrid Corp
+176,Gas Plant 176,Argentina,South America,Gas,773,1996,16.758,66.692,AsiaEnergy Co
+177,Solar Plant 177,Australia,Oceania,Solar,253,2019,36.825,47.47,GreenWind Inc
+178,Wind Plant 178,India,Asia,Wind,496,2015,-13.561,-102.359,AsiaEnergy Co
+179,Solar Plant 179,India,Asia,Solar,132,2016,28.911,92.568,SunGrid Corp
+180,Gas Plant 180,Japan,Asia,Gas,304,2007,-27.299,95.813,AfricaWind
+181,Wind Plant 181,China,Asia,Wind,183,2014,-21.693,25.068,AsiaEnergy Co
+182,Wind Plant 182,USA,North America,Wind,348,2018,-43.522,17.984,AfricaWind
+183,Hydro Plant 183,Egypt,Africa,Hydro,880,1981,11.937,4.71,EuroSolar AG
+184,Hydro Plant 184,Chile,South America,Hydro,609,1995,-31.184,18.722,EuroSolar AG
+185,Solar Plant 185,Australia,Oceania,Solar,331,2008,-23.827,-60.844,AusRenew
+186,Coal Plant 186,Brazil,South America,Coal,1041,1976,-26.094,-95.6,GreenWind Inc
+187,Wind Plant 187,Sweden,Europe,Wind,206,2020,-48.965,145.794,GreenWind Inc
+188,Wind Plant 188,Spain,Europe,Wind,224,2017,42.93,-44.666,Maghreb Power
+189,Solar Plant 189,China,Asia,Solar,257,2023,-38.666,-101.975,GreenWind Inc
+190,Nuclear Plant 190,Sweden,Europe,Nuclear,1033,2003,-31.787,-68.98,DragonPower
+191,Nuclear Plant 191,Kenya,Africa,Nuclear,1204,2009,52.912,-53.004,EuroNuke
+192,Hydro Plant 192,Canada,North America,Hydro,569,1988,29.633,27.453,BrazilEnergy
+193,Solar Plant 193,South Africa,Africa,Solar,362,2019,-40.806,127.858,AsiaEnergy Co
+194,Gas Plant 194,UK,Europe,Gas,644,2009,-19.501,-95.872,EuroNuke
+195,Coal Plant 195,Spain,Europe,Coal,980,2002,-9.843,26.503,AusRenew
+196,Coal Plant 196,South Africa,Africa,Coal,885,2002,-8.343,0.548,BrazilEnergy
+197,Solar Plant 197,India,Asia,Solar,319,2015,22.475,-41.23,BrazilEnergy
+198,Nuclear Plant 198,Japan,Asia,Nuclear,938,2003,7.375,9.874,AusRenew
+199,Hydro Plant 199,Poland,Europe,Hydro,706,2004,-7.446,-68.316,EuroNuke
+200,Coal Plant 200,Chile,South America,Coal,1188,1989,53.227,107.889,PowerGen LLC

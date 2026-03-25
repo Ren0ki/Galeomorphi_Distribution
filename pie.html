@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Power Plant Visualizations</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+}
+
+.tooltip{
+    position:absolute;
+    background:white;
+    border:1px solid #ccc;
+    padding:6px 10px;
+    border-radius:4px;
+    pointer-events:none;
+    font-size:13px;
+    opacity:0;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Marine Province Distributions</h1>
+
+<svg id="piechart" width="500" height="400"></svg>
+
+<div id="tooltip" class="tooltip"></div>
+
+<script>
+
+const tooltip = d3.select("#tooltip");
+
+function showTooltip(event, html){
+    tooltip
+        .style("opacity",1)
+        .html(html)
+        .style("left",(event.pageX+10)+"px")
+        .style("top",(event.pageY-20)+"px");
+}
+
+function hideTooltip(){
+    tooltip.style("opacity",0);
+}
+
+d3.csv("Galeomorphi_Chart.csv").then(data=>{
+
+data.forEach(d=>{
+    d.isGaleomorphi = +d.isGaleomorphi; 
+});
+
+////////////////////////////////////////////////
+//// GLOBAL COLOR PALETTE
+////////////////////////////////////////////////
+
+const marineProvinces = [...new Set(data.map(d=>d.marine_province))];
+
+const color = d3.scaleOrdinal()
+    .domain(marineProvinces)
+    .range(d3.schemeTableau10);
+
+////////////////////////////////////////////////
+//// PIE CHART
+////////////////////////////////////////////////
+
+const pieSvg=d3.select("#piechart")
+    .append("g")
+    .attr("transform","translate(250,200)");
+
+const radius=150;
+
+const summary=d3.rollups(
+    data,
+    v=>d3.sum(v,d=>d.isGaleomorphi),
+    d=>d.marine_province
+).map(([marine_province,total])=>({marine_province,total}));
+
+const pie=d3.pie()
+    .value(d=>d.total);
+
+const arcs=pie(summary);
+
+const arc=d3.arc()
+    .innerRadius(0)
+    .outerRadius(radius);
+
+pieSvg.selectAll("path")
+    .data(arcs)
+    .enter()
+    .append("path")
+    .attr("d",arc)
+    .attr("fill",d=>color(d.data.marine_province))
+    .on("mousemove",(event,d)=>{
+        showTooltip(event,
+        `<b>${d.data.marine_province}</b><br>
+        Galeomorphi Sightings: ${d.data.total.toFixed(0)}`);
+    })
+    .on("mouseout",hideTooltip);
+
+});
+
+</script>
+
+</body>
+</html>
