@@ -1,5 +1,4 @@
 <head>
-    <!-- Reference Author:  chris3edwards3 on codepen.io-->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
@@ -7,7 +6,7 @@
   <div id="plot"></div>
   <script>
     const CSV =
-    "#";
+    "https://raw.githubusercontent.com/Ren0ki/Galeomorphi_Distribution/main/Galeomorphi_Surface.csv";
 
 Plotly.d3.csv(CSV, function(err, rows){
     function unpack(rows, key) {
@@ -17,7 +16,7 @@ Plotly.d3.csv(CSV, function(err, rows){
     let z_data=[];
 
     let i = 0;
-    while (i < 15) {
+    while (i < 21) {
         z_data.push(unpack(rows, i));
         i += 1;
     }
