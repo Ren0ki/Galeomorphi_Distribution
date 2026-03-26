@@ -11,8 +11,14 @@
 <style>
 body{
     font-family: Arial, sans-serif;
+    background-image: url('/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
 }
-
 svg{
     margin-bottom:50px;
 }
@@ -38,48 +44,56 @@ svg{
     display: flex;
     flex-direction: column;
 }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
 </style>
 </head>
 
-<body>
+<div class="dashboard">
 
-    <!-- LEFT -->
-    <div class="dashboard">
-        <div class="column">
-                <!-- Histogram -->
-<h2>Sightings Over Time</h2>
-<label>Bin Size:</label>
-<input type="range" id="binSlider" min="5" max="50" value="20">
-<svg id="histogram" width="700" height="400"></svg>
+    <!-- LEFT COLUMN -->
+    <div class="column">
 
-<!-- Pie Chart -->
-<h2>Marine Province Distribution</h2>
-<svg id="piechart" width="500" height="400"></svg>
-        </div>
+                <h3>Marine Province Distribution</h2>
+        <svg id="piechart" width="300" height="300"></svg>
+        <h3>Sightings Over Time</h2>
+        <label>Bin Size:</label>
+        <input type="range" id="binSlider" min="5" max="50" value="20" style="width: 100px; padding-left: 100px;";>
+        <svg id="histogram" width="250" height="250"></svg>
+
+
+        <div class="flex-container">
+        <img src= "/line.png" alt="Line Graph" width="50" height="50">
+            <p><b> Why the Uptick?</b></p>
     </div>
 
-<h1>Galeomorphi Visualizations Dashboard</h1>
+    <p>  Researchers saw a significant increase in beachgoer activity during the early 2000s. What conclusions can you 
+            draw from this trend when compared to shark sightings?</p>
 
-<!-- MIDDLE -->
- <div class = "dashboard">
-        <div class="column">
-            <!-- Surface Plot -->
-<h2>3D Surface Plot</h2>
-<div id="surface" style="width:500px;height:500px;"></div>
-            </div>
-            </div>
+    </div>
 
+    <!-- MIDDLE COLUMN -->
+    <div class="column">
+        <div id="surface" style="width:100%;height:500px;margin-right: 100px;"></div>
+           <h3 style="padding-top: 200px;">Sightings with Longitude and Latitude</h2>
+    </div>
 
- <div class = "dashboard">
-        <div class="column">
-            <!-- Stacked Bar -->
-            <h2>Stacked Distribution</h2>
-            <div id="stacked"></div>
-            </div>
-            </div>
-
-
+    <!-- RIGHT COLUMN -->
+    <div class="column">
+        <h1>Galeomorphi  Distributions</h1>
+         <p> Galeomorphi are a superorder of cartilaginous fish encompassing a majority of the shark population.  
+        Many sharks under this superorder, such as the basking shark, are known to dwell near the ocean surface.
+        This behavior may contribute to increased sightings and recordings.</p>
+        <h3>Common Species per Marine Province</h2>
+        <div id="stacked"></div>
+    </div>
 <div id="tooltip" class="tooltip"></div>
+</div>
 
 <script>
 
@@ -175,7 +189,7 @@ d3.select("#binSlider").on("input",function(){
 // -------------------- PIE CHART --------------------
 const pieSvg=d3.select("#piechart")
     .append("g")
-    .attr("transform","translate(250,200)");
+    .attr("transform","translate(150,150)");
 
 const summary=d3.rollups(
     data,
@@ -184,7 +198,7 @@ const summary=d3.rollups(
 ).map(([marine_province,total])=>({marine_province,total}));
 
 const pie=d3.pie().value(d=>d.total);
-const arc=d3.arc().innerRadius(0).outerRadius(150);
+const arc=d3.arc().innerRadius(0).outerRadius(100);
 
 pieSvg.selectAll("path")
     .data(pie(summary))
@@ -204,8 +218,8 @@ pieSvg.selectAll("path")
 d3.csv("Galeomorphi_Stacked.csv").then(data=>{
 
 const margin = {top:10,right:30,bottom:20,left:50},
-      width = 460 - margin.left - margin.right,
-      height = 400 - margin.top - margin.bottom;
+      width = 400 - margin.left - margin.right,
+      height = 250 - margin.top - margin.bottom;
 
 const svg = d3.select("#stacked")
   .append("svg")
@@ -270,13 +284,19 @@ Plotly.newPlot('surface', [{
     type: 'surface'
 }], {
     title: '3D Surface',
-    width:500,
-    height:500
+    width:700,
+    height:700,
+     paper_bgcolor: 'rgba(0,0,0,0)', 
+
+    scene: {
+        bgcolor: 'rgba(0,0,0,0)'
+    }
+    
 });
+
+
 
 });
 
 </script>
-
-</body>
 </html>
