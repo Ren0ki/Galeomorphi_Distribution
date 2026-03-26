@@ -1,46 +1,49 @@
 <head>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<!-- Load plotly.js into the DOM -->
+	<script src='https://cdn.plot.ly/plotly-3.4.0.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 </head>
 
 <body>
-  <div id="plot"></div>
-  <script>
-    const CSV =
-    "https://raw.githubusercontent.com/Ren0ki/Galeomorphi_Distribution/master/Galeomorphi_Surface.csv";
+	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+    <script>
+        d3.csv('https://raw.githubusercontent.com/Ren0ki/Galeomorphi_Distribution/master/Galeomorphi_Surface2.csv', function(err, rows){
+function unpack(rows, key) {
+  return rows.map(function(row) { return row[key]; });
+}
 
-Plotly.d3.csv(CSV, function(err, rows){
-    function unpack(rows, key) {
-        return rows.map(function(row) { return row[key]; });
-    }
+var z_data=[ ]
+for(i=0;i<19;i++)
+{
+  z_data.push(unpack(rows,i));
+}
 
-    let z_data=[];
+var data = [{
+           z: z_data,
+           type: 'surface'
+        }];
 
-    let i = 0;
-    while (i < 16) {
-        z_data.push(unpack(rows, i));
-        i += 1;
-    }
-
-    let data = [{
-        z: z_data,
-        type: 'surface',
-        // colorscale: "YIGnBu" //https://plot.ly/javascript/colorscales/
-    }];
-
-    let layout = {
-        title: 'Example 3D Surface',
-        autosize: false,
-        height: 600,
-        width: 700,
-        margin: {
-            l: 65,
-            r: 50,
-            b: 65,
-            t: 30,
-        }
-    };
-
-    Plotly.newPlot('plot', data, layout);
+var layout = {
+    scene: {
+        xaxis: {range: [-170, 170]},
+        yaxis: {range: [-170, 170]},
+        zaxis: {range: [0, 150]}
+    },
+  title: {
+    text: 'Galeomorphi Distribution per Coordinate'
+  },
+  autosize: false,
+  width: 500,
+  height: 500,
+  margin: {
+    l: 65,
+    r: 50,
+    b: 65,
+    t: 90,
+  }
+};
+Plotly.newPlot('myDiv', data, layout);
 });
-  </script>
+
+    </script>
 </body>
