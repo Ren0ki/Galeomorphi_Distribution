@@ -43,7 +43,7 @@ d3.csv("https://raw.githubusercontent.com/Ren0ki/Galeomorphi_Distribution/master
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 99])
+    .domain([0, 300])
     .range([ height, 0 ]);
   svg.append("g")
     .call(d3.axisLeft(y));
