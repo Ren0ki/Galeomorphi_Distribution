@@ -24,14 +24,14 @@ svg{
 }
 
 .tooltip{
-    position:absolute;
-    background:white;
-    border:1px solid #ccc;
-    padding:6px 10px;
-    border-radius:4px;
-    pointer-events:none;
-    font-size:13px;
-    opacity:0;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 13px;
+    opacity: 0;
 }
 
 .dashboard{
@@ -52,45 +52,77 @@ svg{
             gap: 20px;
         }
 
+.pHeader{
+   padding-right: 900px;
+}
+
+.chart{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-bottom:  50px;
+    padding-top: 30px;
+    border-radius: 12px;
+    p{
+        padding: 20px;
+    }
+}
+
 </style>
 </head>
+
+
+        <h1>Galeomorphi  Distributions</h1>
+         <p class="pHeader"> Galeomorphi are a superorder of cartilaginous fish encompassing a majority of the shark population.  
+        Many sharks under this superorder, such as the basking shark, are known to dwell near the ocean surface.
+        This behavior may contribute to increased sightings and recordings.</p>
+<br/>
 
 <div class="dashboard">
 
     <!-- LEFT COLUMN -->
     <div class="column" style="margin-top: 10px;">
 
-        <h1>Galeomorphi  Distributions</h1>
-         <p> Galeomorphi are a superorder of cartilaginous fish encompassing a majority of the shark population.  
-        Many sharks under this superorder, such as the basking shark, are known to dwell near the ocean surface.
-        This behavior may contribute to increased sightings and recordings.</p>
-        <h3>Marine Province Distribution</h3>
-        <svg id="piechart" width="300" height="300"></svg>
+        <div class = "chart">        
+            <h3>Marine Province Distribution</h3>
+            <svg id="piechart" width="300" height="300"></svg>
+    </div>
+
+
+    <div class = "chart">  
         <h3>Common Species per Marine Province</h3>
         <div id="stacked"></div>
-         <h3>Sightings Over Time</h3>
-        <label>Bin Size:</label>
-        <input type="range" id="binSlider" min="5" max="50" value="20" style="width: 100px; padding-left: 100px;";>
-        <svg id="histogram" width="250" height="250"></svg>
+    </div>
 
     </div>
 
     <!-- MIDDLE COLUMN -->
     <div class="column">
+        <div class = "chart">  
         <div id="scatter3d" style="width:100%; height:500px;margin-top: 100px;"></div>
         <h3 style="padding-top: 50px;">Sightings with Longitude(x) and Latitude(y)</h3>
+        </div>
     </div>
 
     <!-- RIGHT COLUMN -->
-    <div class="column" style="margin-left: 100px;">
+    <div class="column">
+
+            <div class = "chart">  
+         <h3>Sightings Over Time</h3>
+        <label>Bin Size:</label>
+        <input type="range" id="binSlider" min="5" max="50" value="20" style="width: 100px; padding-left: 100px;";>
+        <svg id="histogram" width="250" height="250"></svg>
+    </div>
+        <div class = "chart">  
                 <div class="flex-container">
+        </div>
+
         <img src= "/line.png" alt="Line Graph" width="50" height="50">
             <p><b> Why the Uptick?</b></p>
+            <p>  Researchers saw a significant increase in beachgoer activity during the early 2000s. What conclusions can you 
+            draw from this trend when compared to shark sightings?</p>
+
     </div>
 
-    <p>  Researchers saw a significant increase in beachgoer activity during the early 2000s. What conclusions can you 
-            draw from this trend when compared to shark sightings?</p>
-    </div>
 <div id="tooltip" class="tooltip"></div>
 </div>
 
@@ -197,7 +229,7 @@ const summary=d3.rollups(
 ).map(([marine_province,total])=>({marine_province,total}));
 
 const pie=d3.pie().value(d=>d.total);
-const arc=d3.arc().innerRadius(0).outerRadius(100);
+const arc=d3.arc().innerRadius(0).outerRadius(90);
 
 pieSvg.selectAll("path")
     .data(pie(summary))
