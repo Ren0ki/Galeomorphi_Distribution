@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, sans-serif;
+    background-image: url('/assets/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+}
+svg{
+    margin-bottom:50px;
+}
+
+.tooltip{
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 13px;
+    opacity: 0;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+.pHeader{
+   padding-right: 900px;
+}
+
+.chart{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-bottom:  50px;
+    padding-top: 30px;
+    border-radius: 12px;
+    background-color:  white;
+
+    p{
+        padding: 20px;
+    }
+
+}
+   .container {
+	 display: flex; 
+   }
+    .image-container {
+      float: left;
+      margin-right: 20px;
+    }
