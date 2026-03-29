@@ -17,7 +17,7 @@ function hideTooltip(){
 }
 
 // -------------------- DATA --------------------
-d3.csv("/data/Galeomorphi_Data.csv").then(data=>{
+d3.csv("https://raw.githubusercontent.com/Ren0ki/Galeomorphi_Distribution/master/data/Galeomorphi_Data.csv").then(data=>{
 
 data.forEach(d=>{
     d.year = +d.year;
@@ -125,7 +125,7 @@ pieSvg.selectAll("path")
 });
 
 // -------------------- STACKED BAR --------------------
-d3.csv("/data/Galeomorphi_Stacked.csv").then(data=>{
+d3.csv("https://raw.githubusercontent.com/Ren0ki/Galeomorphi_Distribution/master/data/Galeomorphi_Stacked.csv").then(data=>{
 
 const margin = {top:10,right:30,bottom:90,left:50},
       width = 250 - margin.left - margin.right,
@@ -181,7 +181,7 @@ svg.append("g")
 });
 
 // -------------------- SCATTER 3D --------------------
-d3.csv("/data/Galeomorphi_Surface.csv").then(rows => {
+d3.csv("https://raw.githubusercontent.com/Ren0ki/Galeomorphi_Distribution/master/data/Galeomorphi_Surface.csv").then(rows => {
 
 function unpack(rows, key) {
     return rows.map(row => +row[key]);
