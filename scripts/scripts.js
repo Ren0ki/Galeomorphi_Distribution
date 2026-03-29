@@ -69,7 +69,7 @@ function draw(binCount){
         .attr("fill",globalColor(marineProvinces[0]))
         .on("mousemove",(event,d)=>{
             showTooltip(event,
-                `<b>Range:</b> ${d.x0} - ${d.x1}<br>Count: ${d.length}`);
+                `<b>Range:</b> ${d.x0} - ${d.x1}<br>Galean Shark Sightings: ${d.length}`);
         })
         .on("mouseout",hideTooltip);
 
@@ -101,18 +101,24 @@ const summary=d3.rollups(
     d=>d.marine_province
 ).map(([marine_province,total])=>({marine_province,total}));
 
-const pie=d3.pie().value(d=>d.total);
-const arc=d3.arc().innerRadius(0).outerRadius(90);
+const pie=d3.pie()
+    .value(d=>d.total);
+
+const arcs = pie(summary);
+
+const arc=d3.arc()
+    .innerRadius(0)
+    .outerRadius(90);
 
 pieSvg.selectAll("path")
-    .data(pie(summary))
+    .data(arcs)
     .enter()
     .append("path")
     .attr("d",arc)
     .attr("fill",d=>globalColor(d.data.marine_province))
     .on("mousemove",(event,d)=>{
         showTooltip(event,
-            `<b>${d.data.marine_province}</b><br>${d.data.total}`);
+            `<b>${d.data.marine_province}</b><br>Galean Sharks Recorded: ${d.data.total}`);
     })
     .on("mouseout",hideTooltip);
 
@@ -168,7 +174,7 @@ svg.append("g")
     .attr("height", d=>y(d[0]) - y(d[1]))
     .attr("width", x.bandwidth())
     .on("mousemove",(event,d)=>{
-        showTooltip(event,`Value: ${d[1]-d[0]}`);
+        showTooltip(event,`Count Per Species: ${d[1]-d[0]}`);
     })
     .on("mouseout",hideTooltip);
 
