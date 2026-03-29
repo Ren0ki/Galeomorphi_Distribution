@@ -5,7 +5,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: 100% 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255,);
     background-blend-mode: lighten;
 }
 svg{
@@ -25,7 +25,7 @@ svg{
 
 .dashboard{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 400px 800px 400px;
     gap: 30px;
     align-items: start;
 }
@@ -54,7 +54,12 @@ svg{
     background-color:  white;
 
     p{
-        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    img{
+        padding-left: 20px;
     }
 
 }
@@ -64,4 +69,18 @@ svg{
     .image-container {
       float: left;
       margin-right: 20px;
+    }
+
+    button{
+        width: 500px;
+        border-image: linear-gradient(to right, #f7d7c8 0%, #cdd3fb 100%) 1;
+        border-width: 4px;
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .banner{
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
     }

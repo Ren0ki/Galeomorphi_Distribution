@@ -13,7 +13,8 @@
  <link rel="stylesheet" href="styles/styles.css">
 
 </head>
-<h1>The Sharkipedia Dataset Dashboard</h1>
+<img class="banner" src="assets/sharkipedia.png" alt="banner" />
+
 <br/>
 
 <div class="dashboard">
@@ -26,7 +27,7 @@
             <svg id="piechart" width="300" height="300"></svg>
     </div>
 
-        <!-- HISTOGRAM -->
+    <!-- HISTOGRAM -->
     <div class = "chart">  
          <h3>Sightings Over Time</h3>
         <label>Bin Size:</label>
@@ -35,29 +36,57 @@
     </div>
 
      <!-- INFO -->
- 
-        <img src= "/assets/line.png" alt="Line Graph" width="50" height="50">
-            <p><b> Why the Uptick?</b></p>
+
+         <div class = "chart"> 
+             <div class="container">
+            <div class = "image-container">
+                <img src ="/assets/line.png" alt="shark" width="50px" height="50px"/>
+            </div>
+        <p><b> Why the Uptick?</b></p>
+        </div>
             <p>  Researchers saw a significant increase in beachgoer activity during the early 2000s. What conclusions can you 
             draw from this trend when compared to shark sightings?</p>
+        </br/></br/>    
+        </div>
+            
     </div>
 
     <!-- MIDDLE COLUMN -->
     <div class="column">
+
+        <!-- SCATTER PLOT -->
         <div class = "chart">  
         <div id="scatter3d" style="width:100%; height:500px;margin-top: 100px;"></div>
         <h3 style="padding-top: 50px;">Sightings with Longitude(x) and Latitude(y)</h3>
+        <br/><br/>
+        </div>
+
+        <div class = "chart">  
+        <h2>Want to Learn More? </h2>
+        <br/>
+        <button type="button" onclick="window.location.href='https://www.marinelifeid.com/identification/galean-sharks-galeomorphi/';"> <h3>Identification Tips </h3></button>
+        <br/><br/>
+        <button type="button" onclick="window.location.href='https://www.marinelifeid.com/identification/galean-sharks-galeomorphi/';"> <h3>Taxnonomies </h3></button>
+        <br/><br/>
+        <button type="button" onclick="window.location.href='https://www.nature.com/articles/s41597-022-01655-1';"> <h3> The Dataset </h3></button>
+        <br/> <br/><br/><br/>
         </div>
     </div>
 
-    <!-- RIGHT COLUMN -->
-    <div class="column">
+        <!-- RIGHT COLUMN -->
+        <div class="column">
 
+        <!-- FACTS -->
+             <div class = "chart"> 
         <h1>Galeomorphi  Distributions</h1>
          <p > Galeomorphi are a superorder of cartilaginous fish encompassing a majority of the shark population.  
         Many sharks under this superorder, such as the basking shark, are known to dwell near the ocean surface.
         This behavior may contribute to increased sightings and recordings.</p>
+         </br/></br/>
+        </div>
         
+        <!-- BULLETS -->
+             <div class = "chart"> 
        <h3>Most Common</h3>
         <br/>
         <div class="container">
@@ -83,8 +112,8 @@
         <p> Sphyrna Lewini</p>
         </div>
          <br/> <br/>
-            
-
+            </div>
+        <!-- STACKED -->
         <div class = "chart">  
         <h3>Common Species per Marine Province</h3>
         <div id="stacked"></div>

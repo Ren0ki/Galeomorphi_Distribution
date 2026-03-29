@@ -75,7 +75,10 @@ function draw(binCount){
 
     chart.append("g")
         .attr("transform","translate(0,"+innerHeight+")")
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x))
+          .selectAll("text")
+          .attr("transform", "rotate(-45)")
+          .style("text-anchor", "end");
 
     chart.append("g")
         .call(d3.axisLeft(y));
@@ -118,7 +121,7 @@ pieSvg.selectAll("path")
 // -------------------- STACKED BAR --------------------
 d3.csv("/data/Galeomorphi_Stacked.csv").then(data=>{
 
-const margin = {top:10,right:30,bottom:20,left:50},
+const margin = {top:10,right:30,bottom:90,left:50},
       width = 250 - margin.left - margin.right,
       height = 250 - margin.top - margin.bottom;
 
@@ -139,7 +142,10 @@ const x = d3.scaleBand()
 
 svg.append("g")
     .attr("transform",`translate(0,${height})`)
-    .call(d3.axisBottom(x));
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .attr("transform", "rotate(-45)")
+    .style("text-anchor", "end");
 
 const y = d3.scaleLinear()
     .domain([0,300])
