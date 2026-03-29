@@ -121,7 +121,7 @@ pieSvg.selectAll("path")
 // -------------------- STACKED BAR --------------------
 d3.csv("/data/Galeomorphi_Stacked.csv").then(data=>{
 
-const margin = {top:10,right:30,bottom:90,left:50},
+const margin = {top:10,right:30,bottom:0,left:50},
       width = 250 - margin.left - margin.right,
       height = 250 - margin.top - margin.bottom;
 
@@ -175,36 +175,6 @@ svg.append("g")
 });
 
 // -------------------- SCATTER 3D --------------------
-d3.csv("Galeomorphi_Surface.csv").then(rows => {
-
-function unpack(rows, key) {
-    return rows.map(row => +row[key]);
-}
-
-const trace = {
-    x: unpack(rows, 'x1'),
-    y: unpack(rows, 'y1'),
-    z: unpack(rows, 'z1'),
-    mode: 'markers',
-    type: 'scatter3d',
-    marker: {
-        size: 4,
-        opacity: 0.8
-    }
-};
-
-Plotly.newPlot('scatter3d', [trace], {
-    margin: {l: 0, r: 0, b: 0, t: 30},
-    paper_bgcolor: 'rgba(0,0,0,0)',
-    scene: {
-        bgcolor: 'rgba(0,0,0,0)',
-        xaxis: {title: 'Longitude'},
-        yaxis: {title: 'Latitude'},
-        zaxis: {title: 'Sightings'}
-    }
-}, {responsive: true});
-
-});// -------------------- SCATTER 3D --------------------
 d3.csv("/data/Galeomorphi_Surface.csv").then(rows => {
 
 function unpack(rows, key) {
@@ -224,7 +194,7 @@ const trace = {
 };
 
 Plotly.newPlot('scatter3d', [trace], {
-    margin: {l: 0, r: 0, b: 0, t: 30},
+    margin: {l: 0, r: 0, b: 0, t: 0},
         height: '1000px',
     paper_bgcolor: 'rgba(0,0,0,0)',
     scene: {
@@ -233,6 +203,11 @@ Plotly.newPlot('scatter3d', [trace], {
         yaxis: {title: 'Latitude'},
         zaxis: {title: 'Sightings'}
     }
-}, {responsive: true});
+}, {
+    responsive: true,
+    displayModeBar: false  
+  }
+
+);
 
 });
