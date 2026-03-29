@@ -121,7 +121,7 @@ pieSvg.selectAll("path")
 // -------------------- STACKED BAR --------------------
 d3.csv("/data/Galeomorphi_Stacked.csv").then(data=>{
 
-const margin = {top:10,right:30,bottom:0,left:50},
+const margin = {top:10,right:30,bottom:90,left:50},
       width = 250 - margin.left - margin.right,
       height = 250 - margin.top - margin.bottom;
 
