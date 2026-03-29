@@ -29,7 +29,7 @@ svg{
     grid-template-columns: 400px 800px 400px;
     gap: 30px;
     align-items: start;
-    margin-left: 200px;
+    margin-left: 10%;
 }
 
 .column{
